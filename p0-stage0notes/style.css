@@ -1,0 +1,12 @@
+body {
+	padding: 20px 10px;
+	font-family: Helvetica;
+	max-width: 2000px;
+	margin: 0 auto;
+	font-size: 1.2em;
+}
+
+h1 {
+	text-align: center;
+	color: #294860;
+}

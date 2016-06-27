@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet"  type="text/css"  href="main.css">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <link rel="shortcut icon" href="favicon.ico">
+  <title>My Notes</title>
+</head>
+<body class="main">
+    <header class="header">
+      <h1>Table of Contents</h1>
+    </header>
+    <section class="section">
+    <ol>
+      <li><a href="#lesson-1">Lesson 1: Webpages, Documents, and Structure</a>
+        <ul>
+          <li><a href="#lesson-1-1">The Basics of the Web and HTML</a></li>
+          <li><a href="#lesson-1-2">Creating a Structured Document with HTML</a></li>
+          <li><a href="#lesson-1-3">Adding CSS Style to HTML Structure</a></li>
+        </ul>
+      </li>
+      <li><a href="#lesson-2">Lesson 2: Telling Computers What To Do</a>
+        <ul>
+          <li><a href="#lesson-2-1">Introduction to Serious Programming</a></li>
+          <li><a href="#lesson-2-2">Variables and Strings</a></li>
+          <li><a href="#lesson-2-3">Input-->Function-->Output</a></li>
+          <li><a href="#lesson-2-4">Decisions and Repetition:If and While</a></li>
+          <li><a href="#lesson-2-5">Structured Data: Lists and For Loops</a></li>
+        </ul>
+      </li>
+      <li><a href="#lesson-3">Lesson 3: The Power Of Abstraction</a>
+        <ul>
+          <li><a href="#lesson-3-1">Functions</a></li>
+          <li><a href="#lesson-3-2">Use Classes</a></li>
+          <li><a href="#lesson-3-3">Use Classes - External Python Packages</a></li>
+          <li><a href="#lesson-3-4">Use Classes-Files</a></li>
+          <li><a href="#lesson-3-5">Make Classes</a></li>
+          <li><a href="#lesson-3-6">Make Classes- Advanced Topics</a></li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+  <header class="header" id="lesson-1">
+    <h1>Webpages, Documents, and Structure</h1>
+  </header>
+  <main>
+    <article id="lesson-1-1"><!-- Lesson 1.1  -->
+      <h2>The Basics of the Web and HTML</h2>
+        <section class="section">
+          <div>
+            <h3><b>How the Web Works</b></h3>
+            <em>Hyper Text Markup Language</em> is the language of the internet. HTML is interpreted by a computer's browser. These documents reside on servers. When a user accesses a webpage their computer sends an HTTP request to the server. The server finds the document and sends it across the internet where it is interpreted by the user's browser. The web is a collection of HTML documents. There are approximately 30 billion pages on the World Wide Web.
+          </div>
+          <br>
+          <div>
+            <img src="picture_of_web.svg" alt="cartoon of web" />
+          </div>
+          <br>
+          <div>
+            <h3><b>HTML Markup</b></h3>
+            <ul>
+              <li>Text Content- "What you see"</li>
+              <li>Markup- "What it looks like" references to other documents e.g. images and video and links to other pages.</li>
+              <li>Element-An element is comprised of an opening tag, content, and a closing tag.</li>
+            </ul>
+          </div>
+          <div>
+            <h3><b>HTML Attributes</b></h3>
+            <ul>
+              <li>Tag Attribute<code>&lt; tag attribute="value" &gt; contents&lt;/tag&gt;</code></li>
+              <li>Anchor Tag <code>&lt;a&gt;</code>- creates a link</li>
+              <li>Creating a link <code>&lt;a href="www.reddit.com" &gt;derp&lt;/a&gt;</code>
+              <a href="www.reddit.com">derp</a></li>
+              <li> image tag- <code>&lt;img&gt;&lt;img src="url of image" alt="text"&gt;</code></li>
+            </ul>
+          </div>
+          <div>
+            <h3><b>White Space</b></h3>
+            <ul>
+              <li>HTML renders all white space as a single space</li>
+              <li><code>&lt;br&gt;</code> break (void tag does not need close)</li>
+              <li><code>&lt;p&gt; </code>paragraph tag<code>&lt;/p&gt;</code>(Requires Close)</li>
+            </ul>
+          </div>
+          <div>
+            <h3><b>Inline vs. Block</b></h3>
+            <ul>
+              <li><code>&lt;br&gt;</code>tag is inline</li>
+              <li><code>&lt;p&gt;</code> tag is a block element. It creates an "invisible box" around the content.</li>
+              <li><code>&lt;span&gt;</code><code>&lt;/span&gt;</code>- inline</li>
+              <li><code>&lt;div&gt;</code><code>&lt;/div&gt;</code>- block</li>
+            </ul>
+          </div>
+          <div>
+            <h3><b>HTML Documents</b></h3>
+            <ul>
+              <li>Head- contains title and metadata, CSS, and Javascript</li>
+              <li>Body- contains content</li>
+            </ul>
+          </div>
+        </section>
+    </article><!-- Lesson 1-->
+    <article id = "lesson-1-2"><!--Lesson 1.2-->
+      <h2>Creating a Structured Document with HTML</h2>
+        <section class ="section">
+          <div>
+            <h3><b>Tree Structure of HTML</b></h3>
+            <ul>
+              <li>HTML has a tree like structure, wth elements nested inside other elements. Link to <a href="http://en.wikipedia.org/wiki/Tree_structure">Wikipedia article on Tree Structure</a>. When programmers talk about the DOM(Document Object Model) they are talking about the tree like structure of a web page.</li>
+              <li>HTML controls the "structure" of the web page</li>
+              <li>CSS controls the "style" of a page (How it looks)</li>
+              <li>CSS helps web designers avoid repetition. Avoiding repetition helps to keep code "clean" and more easily modifiable.</li>
+              <li>Boxes- webpages are composed of "boxes". &lt;div&gt; tag defines boxes. Class attributes are the labels on boxes.
+            </ul>
+          </div>
+          <div>
+            <h3><b>Avoiding Repetition</b></h3>
+            <ul>
+              <li>Avoiding errors-The less you do it, the less chance you have of making errors.</li>
+              <li>Consistency-Reducing repetition makes pages more consistent and easier to change.
+            </ul>
+          </div>
+          <div>
+            <h3><b>Text Editors and Dev Tools</b></h3>
+            <ul>
+              <li><a href="http://Scratchpad.io" target="_blank">Scratchpad</a></li>
+              <li><a href="http://codepen.io" target="_blank">Codepen</a></li>
+              <li><a href="http://www.sublimetext.com" target="_blank">Sublime</a></li>
+            </ul>
+            <p>Web Browsers contain developer tools that allow access to web page coding.</p>
+          </div>
+        </section>
+    </article><!--Lesson 1.2-->
+    <article id="lesson-1-3"><!--Lesson 1.3-->
+      <h2>Adding CSS Style to HTML Structure</h2>
+        <section class="section">
+          <div>
+            <h3><b>Understanding CSS</b></h3>
+              CSS is code written to control the "style" of HTML elements.
+              <pre><code class="code">
+              h1 {
+              background-color : black;
+              color: white;
+              }
+              </code></pre>
+            <code>h1</code> is a <b>selector</b>. This tells the browser what to apply the rules too. The rules are between the <code>{}</code> braces.<code>background-color : black</code> is a <b>rule</b>. <code>background-color</code> is an <b>attribute</b> and <code>black</code> is the <b>value</b> of that attribute.
+            <p> To add style to specific <code>h1</code> or other element use <b>class selectors</b>. Class selectors are written in the format <code>.class-name</code><p>
+          </div><!--Understanding CSS-->
+          <div>
+          <h3><b>Adding CSS to a webpage</b></h3>
+          CSS can be added in three ways.
+          <ol>
+            <li>Write CSS in the <code>&lt;head&gt;</code> of your HTML. Best for small projects and testing.
+            <li>Link your HTML to a separate CSS file. Most organized method and best for larger projects.
+            <ol>
+             <li>Write all of your structural HTML in one file (let's call it <code>main.html</code>).
+             <li>In a separate file (let's call it <code>main.css</code>), put all of your CSS code.
+             <li>Add a <code>&lt;head&gt;</code> element to the top of your HTML.
+             <li>Add a <code>&lt;link&gt;</code> tag inside the <code>&lt;head&gt;</code> element. Since <code>&lt;link&gt;</code> is a "void tag" you don't need to add a closing <code>&lt;/link&gt;</code>.
+             <li>Add the following attributes to your <code>&lt;link rel="stylesheet"  type="text/css"  href="main.css"&gt;</code>
+            </ol>
+            <li>Write your style inline with your HTML- This results in a lot of repeated code.
+          </ol>
+          <h3><b>Box Sizing</b></h3>
+          HTML is comprised of boxes. Boxes have 4 components and because of this it can be hard to get sizing correct. There are two techniques to get sizing correct.
+          <ol>
+            <li>Set sizes in terms of percent rather than pixels.</li>
+            <li>Set the box-sizing attribute to border-box for every element.</li>
+          </ol>
+          <h3><b>Box Positioning</b></h3>
+          <ol>
+              <li>Divs are <b>block elements</b> (as opposed to inline), so by default they take up the entire width of a page.</li>
+              <li>Adding the rule <code>display: flex;</code> to the appropriate CSS will override this behavior and let divs appear next to each other.</li>
+          </ol>
+          </div><!--Add>ing CSS to a webpage-->
+        </section>
+    </article><!--Lesson 1.3-->
+  <header class="header" id="lesson-2">
+    <h1>Telling Computers What To Do</h1>
+  </header>
+    <article id="lesson-2-1"><!--Lesson 2.1-->
+      <h2>Introduction to Serious Programming</h2>
+      <section class="section">
+        <div>
+          <h3>Computer</h3>
+          A computer is a machine that can do almost anything. However, it must be given specific instructions on how to accomplish its task.
+        </div>
+        <div>
+          <h3>Program</h3>
+          A program is a specific sequence of instructions that tell a computer what to do.
+        </div>
+        <div>
+          <h3>Program Language</h3>
+          A program languages are used by programmers to write programs. Languages can be <em>interpreted</em> or <em>compiled</em>. Python is interpreted, which means it uses a seperate program to convert the code to code the computer can understand. Compiled language, such as C++, create an executable file that does not need a compiler to break the program down so the computer can understand it.
+        </div>
+        <div>
+          <h3>Python</h3>
+          Python is an interpreted language. It is named after Monty Python.
+        </div>
+        <div>
+          <h3>Grammar</h3>
+          Programming languages have a specific grammar just like human or natural languages. A computer can only read code written in perfect grammar, other wise it will not run.
+        </div>
+        <div>
+          <h3>Python Expressions</h3>
+          In Python grammar, an expression is <code>print 4 + 5</code>. An example of invalid syntax would be <code>print 2 +</code>. In Python it must match the grammar exactly.
+        </div>
+        <div>
+          <h3>Recursive Definition</h3>
+          A recursive definition requires one rule where we can keep going and one where we can stop.
+        </div>
+      </section>
+    </article> <!--Lesson 2.1 -->
+    <article id="lesson-2-2"> <!--Lesson 2.2-->
+      <h2>Variables and Strings</h2>
+      <section class="section">
+        <div>
+          <h3>Python Variables</h3>
+            Variables allow programmer to assign a name values. This is done through an assignment statement. <code>name=expression</code>. Variable make code easier to read. So instead of using 299792458 a programer can assign this value to a variable such as <code>speed_of_light = 299792458</code>
+            <ul>
+              <li>In math the <code>A = B </code> means "the same as", in Python it means you assigned the value of B to A.</li>
+              <li>Variables allow for more consistent and and readable code.</li>
+              <li>Variables allow programmers a place to store data.</li>
+            </ul>
+        </div>
+        <div>
+          <h3>Python String's</h3>
+          Computers are not just limited to numbers. Strings in Python are a sequence of characters surronded by qoutes.
+            <ul>
+              <li>Valid string <code>"Hello"</code></li>
+              <li>Valid string <code>'Hello'</code></li>
+              <li>Valid string <code>"John said'Hello'"</code></li>
+              <li>Invalid string<code>"Hello'</code></li>
+              <li><code>+</code>concantenates or staples two strings together</li>
+            </ul>
+        </div>
+        <div>
+          <h3>String Indexing</h3>
+          Indexing strings allow characters to be extracted from the string.The method for indexing strings is <code>&lt;string&gt;[expression]</code>.
+            <ul>
+              <li><code>"sagar"[0]</code> is "s"</li>
+            </ul>
+          Selecting sub-sequences is done by using the <code>&lt;string&gt;[expression:expression]</code> method.
+              <pre>
+                <code>
+                  word = "assume"
+                  print word[3]
+                  print word[3:4]
+                  print word[4:]
+                  print word[:2]
+                </code>
+              </pre>
+         Python would respond with:
+              <pre>
+                <code>
+                  u
+                  u
+                  me
+                  as
+                </code>
+              </pre>
+        </div>
+        <div>
+          <h3>Find Method</h3>
+          Python has a built in method to find a string within another string. This method is utilized in this manner <code>&lt;string&gt;.find(&lt;string&gt;)</code>. The second string is the string that we want to find in the first string. Python responds with the position of the first occurance of that string. If it is not found, Python responds with <code>-1</code>.
+            <pre>
+              <code>
+                print "Example 1: Finding substrings in a string"
+                print "test".find("te")
+                print "test".find("st")
+                print "test"[2:]
+                print "Example 2: Finding substrings in a string which is stored as a variable"
+                my_string = "test"
+                print my_string.find("te")
+                print my_string.find("st")
+                print my_string[2:]
+
+                print "Example 3: Printing out everything after a certain substring"
+                my_string = "My favorite color: blue"
+                color_start_location = my_string.find("color:")
+                favorite_color = my_string[color_start_location:]
+                print favorite_color # oops, this line prints out 'color: ' as well...
+                print favorite_color[7:] # this fixes it!
+
+                print "Example 4: Other interesting things about string.find()..."
+                print "text".find("text") # prints 0
+                print "text".find("Text") # prints -1
+                print "text".find("")     # prints 0
+                print "text".find(" ")    # prints -1
+              </code>
+            </pre>
+            Resulting output would be:
+            <pre>
+              <code>
+                Example 1: Finding substrings in a string
+                0
+                2
+                st
+                Example 2: Finding substrings in a string which is stored as a variable
+                0
+                2
+                st
+                Example 3: Printing out everything after a certain substring
+                color: blue
+                blue
+                Example 4: Other interesting things about string.find()...
+                0
+                -1
+                0
+                -1
+              </code>
+            </pre>
+            Finding with numbers. This method allows a programmer to choose where Python begins its search for the string within a string. The number is the starting point. <code>&lt;string&gt;.find(&lt;string&gt;, number)</code>
+            <pre>
+              <code>
+                print "Example 1: using find to print the second occurrence of a sub-string"
+                print "test".find("t")
+                print "test".find("t", 1)
+
+                print "Example 2: using a variable to store first location"
+                first_location = "test".find("t") # here we store the first location of "t"
+                print "test".find("t", first_location+1) # then we use that location to find the second occurrence.
+
+                print "Example 3: using find to get rid of exclamation marks!!"
+                example = "Wow! Python is great! Don't you think?"
+                first = example.find('!')
+                second = example.find('!', first + 1)
+                new_string = example[:first] + example[first+1:second] + example[second+1:]
+                print new_string # oops, I should probably replace the !s periods
+                new_string = example[:first] +'.'+ example[first+1:second] +'.'+ example[second+1:]
+                print new_string
+              </code>
+            </pre>
+            Results would be:
+            <pre>
+              <code>
+                Example 1: using find to print the second occurrence of a sub-string
+                0  # Finds the first "T"
+                3  # Finds the second "T"
+                Example 2: using a variable to store first location
+                3
+                Example 3: using find to get rid of exclamation marks!!
+                Wow Python is great Don't you think?
+                Wow. Python is great. Don't you think?
+              </code>
+            </pre>
+        </div>
+      </section>
+    </article><!--Lesson 2.2 -->
+    <article id="lesson-2-3"><!--Lesson 2.3-->
+      <h2>Input-->Function-->Output</h2>
+        <section class="section">
+          <div>
+            <h3>Functions or "Procedures"</h3>
+            A function is something that takes input, does something to that input, and then produces output. The value of a function is that it allows programmers to do reuse code, because once it is defined you don't have to define it again. To create a function in Python you use the following method.
+            <pre>
+              <code>
+                def square(x): #use keyword def, followed by name, and then parentheses around the parameters
+                answer = x * x
+                return answer
+
+                # to call the function, write the name and give it values
+                print square(4)
+                >>>16
+              </code>
+            </pre>
+            The <code>return</code> keyword is vital to the function because it tells Python what it should produce as an output.
+          </div>
+        </section>
+    </article><!--Lesson 2.3 -->
+    <article id="lesson-2-4"><!--Lesson 2.4-->
+      <h2>Decisions and Repetition:If and While</h2>
+        <section class="section">
+          <div>
+            <h3>Equality Comparisons</h3>
+            Comparisons are in the form of <code>&lt;number&gt;&lt;operator&gt;&lt;number&gt;</code>. The output is in the form of a boolean value.
+            <pre>
+              <code>
+                print "Example 1: Greater-than and less-than comparisons"
+                print 2 > 1
+                print 1 > 2
+                print 5 &lt; 20
+                print 100 &lt; 19
+
+
+                print "Example 2: Equality and non-equality comparisons" # one = is assignment in Python
+                print 5 == 5
+                print "hello" == "hello"
+                print 5 == 10
+                print 5 == '5' # what do you think will happen here?
+                print 7 != 10
+                print 7 != 7
+
+
+                print "Example 3: A demo of what you are about to learn"
+                if 3 &lt; 5:
+                    print "Three is definitely smaller than 5!"
+
+                if 10 > 20:
+                    print "Did you know that 10 is greater than 20!?"
+                else:
+                    print "20 is greater than 10"
+              </code>
+            </pre>
+            Results in:
+            <pre>
+              <code>
+                Example 1: Greater-than and less-than comparisons
+                True
+                False
+                True
+                False
+                Example 2: Equality and non-equality comparisons
+                True
+                True
+                False
+                False
+                True
+                False
+                Example 3: A demo of what you are about to learn
+                Three is definitely smaller than 5!
+                20 is greater than 10
+              </code>
+            </pre>
+            </div>
+            <div>
+            <h3>"if Statements"</h3>
+            Using comparison statements in conjunction with "if" statements allow programs to make decisions. "if" statements are in the form of:
+            <pre>
+              <code>
+                def bigger(a,b):
+                    if a &lt; b:       #if &lt;test expression&gt;:
+                        return b    #         &lt;block&gt;
+                    else:
+                        return a
+              </code>
+            </pre>
+            </div>
+            <div>
+            <h3>"while Loops"</h3>
+            A loop allows a program to run over and over until it gets a result. It gets a result when the test condition is met. <code>break</code> allows a loop to stop, even when the test condition is not met.
+            <pre>
+              <code>
+                def print_numbers(numbers):
+                    i = 1
+                    while i &lt;= numbers:  #i &lt;= numbers is the test condition
+                        print i
+                        i = i + 1
+
+                print_numbers(3)
+                #>>> 1
+                #>>> 2
+                #>>> 3
+
+                def print_numbers(numbers):
+                    i = 1
+                    while i &lt;= numbers:
+                        if i == 2:
+                            break
+                        print i
+                        i = i + 1
+
+
+                print_numbers(3)
+                #>>> 1
+              </code>
+            </pre>
+           </div>
+        </section>
+    </article><!--lesson 2.4 -->
+    <article id="lesson-2-5"><!--Lesson 2.5-->
+      <h2>Structured Data: Lists and For Loops</h2>
+      <section class="section">
+        <div>
+          <h3>Structured Data</h3>
+          Strings are a sequence of characters, while lists are a sequence of anything. Lists are created by using <code>[]</code> .
+          Lists can be accessed and sliced just like strings :
+            <pre>
+              <code>
+                number_list = [3.14159, 2.71828, 1.61803]
+                pi = number_list[0]
+                not_pi = number_list[1:]
+                print pi
+                print not_pi
+
+                Output:
+
+                3.14159
+                [2.71828, 1.61803]
+              </code>
+            </pre>
+            Lists can be "nested" or contain lists within lists. These lists can be mutated or modified.
+            <pre>
+              <code>
+                nested_list = [['HTML', 'Hypertext Markup Language forms the structure of webpages'],
+                               ['CSS' , 'Cascading Style Sheets give pages style'],
+                               ['Python', 'Python is a programming language'],
+                               ['Lists', 'Lists are a data structure that let you organize information']]
+
+                first_concept = nested_list[0]
+
+                first_title = first_concept[0]
+                first_description = first_concept[1]
+                print first_title
+                print first_description
+
+
+                Output:
+                HTML
+                Hypertext Markup Language forms the structure of webpages
+              </code>
+            </pre>
+            <b>Aliasing</b> is having two different ways to refer to the same variable. Using lists and list methods allow a programmer to build very complex data strutures.
+        </div>
+        <div>
+          <h3>List Operations</h3>
+          <ol>
+            <li>List append adds an element to a list. <code>list1 = [0,1,2]</code>--&gt; <code>list1.append[3]</code> = <code> [0,1,2,3]</code>.
+            <li>Plus staples two lists together <code>[0,1] + [2,3]</code> = <code>[0,1,2,3]</code>
+            <li><code>len</code> provides the number of elements within a list.
+          </ol>
+        </div>
+        <div>
+          <h3>Loops on Lists</h3>
+          <b>while Loops</b><br>
+          The while loop can be used to loop through the elements of a list. The code below will print out the elements of the list.
+            <pre>
+              <code>
+                def print_all_elements(p):
+                  i=0
+                  while i&lt;len(p):
+                    print p[i]
+                    i=i+1
+              </code>
+            </pre>
+          The for loop can also be used to loop through the elements of a list.This used less code that the while method
+            <pre>
+              <code>
+                def print_all_elements(p):
+                  for e in p:
+                    print e
+              </code>
+            </pre>
+          The built-in method <b>index</b> gives the position of the first match within a list of a particular element.
+          <pre>
+            <code>
+              def find_element(list,value):
+                for e in list:
+                    if e == value:
+                        return list.index(e)
+                return -1
+
+
+                print find_element([1,2,3],3)
+                #>>> 2
+
+                print find_element(['alpha','beta'],'gamma')
+                #>>> -1
+            </code>
+          </pre>
+        </div>
+      </section>
+    </article><!-- lesson 2.5 -->
+  <header class="header" id="lesson-3">
+    <h1>The Power Of Abstraction</h1>
+  </header>
+    <article id="lesson-3-1"><!--Lesson 3.1-->
+      <h2>Functions</h2>
+      <section class="section">
+        <div>
+    			<h3>Python Standard Library</h3>
+    			The Python Standard Library contains built-in functions that do not require the use of the import command.
+          Python also contains modules with built in functions that must be "imported" in order to be used. <a href="https://docs.python.org/2.7/library/intro.html">Python Standard Library</a>
+          A module is a file that contains functions or executable and can be <em>imported</em> into other modules or the main module.
+		    </div>
+        <div>
+          <h3>Abstraction</h3>
+          Abstraction in programming is a way of managing complexity. The specific way a function works are hidden behind documentation and the details
+          are hidden from the programmer. This allows the programmer to focus on the program we want to write. <a href="http://en.wikipedia.org/wiki/Abstraction_%28computer_science%29">Wikipedia Article on Abstraction</a>
+        </div>
+        <div>
+          <h3>Take a Break Program</h3>
+          This program demonstrates the use of Python's Standard Library imported modules.
+          <pre>
+            <code>
+              import time
+              import webbrowser
+              total_breaks = 3
+              break_count = 0
+              print("This program started on "+time.ctime())
+              while(break count &lt; total_breaks):
+                time.sleep(10)
+                webbrowser.open("http://www.youtube.com/watch?v=dQw4w9WgXcQ")
+                break_count = break_count + 1
+            </code>
+          </pre>
+          <b>How Take a Break Operates</b>
+          <ol>
+            <li>import time and import webbrowser will import the modules from the Python Library</li>
+            <li>total_break = 3 will be used to break the While loop</li>
+            <li>break_count = 0 is used to set the value of the counter</li>
+            <li>time.ctime converts time since the epoch to a string representing the local time</li>
+            <li>While loop will run 3 times as determined by total_break and break_count</li>
+            <li>time.sleep suspends the execution of the program for the given number of seconds. <a href="https://docs.python.org/2.7/library/time.html#time.sleep">Documentation Link</a></li>
+            <li>webbrowser.open open the given link in the webrowser</li>
+            <li>Increments break_count by 1</li>
+          </ol>
+        </div>
+      </section>
+    </article>
+    <article id="lesson-3-2"><!--Lesson 3.2-->
+      <h2>Use Classes</h2>
+      <section class="section">
+      <p>Within the Python Standard Library are files not only with functions, like in the previous section, there are also files with Classes.
+        Classes are neatly packaged boxes that put things together very well. The following is an example of the Python Module Turtle</p>
+        <pre>
+          <code>
+            brad = turtle.Turtle() # Creates an instance of the class "Turtle" named brad
+            brad.shape("turtle")   # Shape of a turtle
+            brad.color("yellow")   # Color will be yellow
+            brad.speed(2)          # Sets the speed
+          </code>
+        </pre>
+        <b>Class</b>- Think of it as a blueprint of a building.<br>
+        <b>Object</b> - Instances or examples of that blueprint.<br>
+        <p> When calling webbrowser.open() we are simply calling a function. When calling turtle.Turtle() it actually calls the init
+          function within turtle and creates space within memory that did not exist before.</p>
+      </section>
+    </article>
+    <article id="lesson-3-3"><!--lesson 3.3-->
+      <h2> Use Classes - External Python Packages </h2>
+      <section class="section">
+        Python programmers are not limited to just the Python Standard Library.
+        External Python Packages give users many more tools to use in their Python programs.<br>
+        Link to <a href= "https://pypi.python.org/pypi?%3Aaction=browse">Python External Libraries</a>
+        <p><b>Twilio</b> is an external Python package that sends a text message using code.</p>
+          <pre>
+            <code>
+              from twilio.rest import TwilioRestClient
+
+              # Your Account Sid and Auth Token from twilio.com/user/account
+              account_sid = "AC32a3c49700934481addd5ce1659f04d2"
+              auth_token  = "{{ auth_token }}"
+              client = TwilioRestClient(account_sid, auth_token)
+
+              message = client.messages.create(body="Jenny please?! I love you",
+                  to="+14159352345",    # Replace with your phone number
+                  from_="+14158141829") # Replace with your Twilio number
+              print message.sid
+            </code>
+          </pre>
+      <p>The example above uses the keyword <b>from</b>. from tells Python to import attributes from a specific module. In other words, when
+        a programmer writes <code>from twilio.rest</code> they are telling the computer that inside <code>twilio</code> there is a folder called <code>rest</code>
+        and inside that folder there is a class called <code>TwillioRestClient</code>. The <code>import</code> command tells the computer we are going to use that class inside our code.
+        The above example can also be written <code>from twilio import rest</code> and modifying line 5 to read <code>client = rest.TwilioRestClient(account_sid, auth_token)</code>
+        Like previous examples, when we use code like<code>client = TwilioRestClient()</code> we are saying that within Twilio there is a folder called rest.
+        and inside that folder is a Python file with a Class TwillioRestClient(): which calls a function "init" which is defined within that function. This
+        assigns space in memory for an object which in this example is called "client".
+      </p>
+      <p> A class is a blueprint. The blueprint allows us to build multiple instances or objects. These objects can then do functions that are described within the Class.</p>
+      </section>
+    </article>
+    <article id="lesson-3-4"><!--Lesson 3.4-->
+      <h2>Use Classes-Files</h2>
+      <section class="section">
+        <div>
+        <p>Python can be used to create an object of a file or a file like object.</p>
+        <b>Opening a File</b>
+        <p> In <code>brad=turtle.Turtle()</code> brad is an object of turtle. Similarly, when
+          a programmer writes <code>quotes=open(file_location)</code>, open returns an object of the file type.
+        </div>
+        <div>
+          <b>Accessing a Website with Code</b>
+          <p>The Python Module <code>urllib</code> and its function<code>urlopen</code> can be used to make a connection to a website.
+            <pre>
+              <code>
+                def check_profanity(text_to_check):
+                    connection = urllib.urlopen("http://www.wdyl.com/profanity?q="+text_to_check)
+                    output = connection.read()
+                    print(output)
+                    connection.close()
+              </code>
+            </pre>
+          <p> In the example code, <code>connection</code> is used to read a response from the website. This response <code>output</code> is printed. The connection is then closed.</p>
+          <p><b>Connecting all Three Lessons</b><br>
+            All three lessons in Module 3 creating an instance or an object of a class and then moving an object or reading a file or accessing a website.
+            Creating instances or objects and then using those objects is Object Oriented Programming, This allows a programmer to save a tremendous amount of time
+            and ensure consistent and quality code. In the same manner that <b>CSS</B> saves a programmer from needing to code style throughout their HTML document. OOP is a
+            major component of programming and the stepstone to managing complexity in programs (<b>abstraction</b>).</p>
+        </div>
+      </section>
+    </article>
+    <article id="lesson-3-5"><!--Lesson 3.5-->
+      <h2>Make Classes</h2>
+      <section class="section">
+        <div>
+          Programmers are not limited to just classes that are found externally, or in the Python Standard Library. Programmers can make
+          classes to perform whatever function they need to do.
+        </div>
+        <div>
+          <p><b> Creating a Class</b></p>
+          <ol>
+            <li> Decide on how Class should be used and what parameters it needs.(oversimplified)</li>
+            <li> Create a new file to write your code for the class. File will be imported into your program like previous examples.
+            <li> Use Python keyword <code>class</code></li>
+            <li> Name the class and capitalize the first letter according to <a href="http://google-styleguide.googlecode.com/svn/trunk/pyguide.html"> Google Style Guide</a></li>
+            <li> Follow with (): <code>className():</code></li>
+          </ol>
+        </div>
+        <div>
+          <p><b>def_init_</b></p>
+          <ol>
+            <li> <code>def_init_(self):</code> is a special function (<b>Contructor</b>)within Python to initilize the newly created empty object.</li>
+            <li> <code>(self)</code> is the commonly used Python convention for referring to the instance's attribute.</li>
+            <li> Use <code>self</code> instead of another variable so that it is not mistaken for a local variable.</li>
+            <li> <code>self</code> is an instance variable, not a local variable.</li>
+          </ol>
+        </div>
+        <div>
+          <p><b>Using your Created Class</b></p>
+          <ol>
+            <li> <code>import class</code> into program</li>
+          </ol>
+        </div>
+        <div>
+          <p><b>Vocabulary Recap</b><p>
+          <ol>
+            <li><b>Class</b>- keyword allows us to make classes(blueprints). Class can have both data and methods.</li>
+            <li><b>Instances</b>are multiple versions of a class.</li>
+            <li>The <b>Constructor</b> <code>def_init_</code> initilaizes all of the data associated wih the instance.</li>
+            <li><code>self</code> is itself or the instance in question.</li>
+            <li><b>instance variables</b> are the variables associated with a specific instance. Unique to the object.</li>
+            <li><b>instance methods</b> are the functions within the class that are associated with an instance and have the first argument as <code>self</code>.</li>
+          </ol>
+        </div>
+      </section>
+    </article>
+    <article id="lesson-3-6"><!--Lesson 3.6-->
+      <h2>Make Classes- Advanced Topics</h2>
+      <section class="section">
+        <p><b>Class Variables</b><p>
+        <ol>
+          <li> Class variables are associated with the class, so they are available to all instances.</li>
+          <li> Class variables are before the <code>def_init_</code></li>
+          <li> Constant variables should be "all caps"</li>
+          <li> All classes come with pre-existing class variables in Python.</li>
+          <li> <code>_doc_</code> is a class variable that when used gives "documentaton" on the class</li>
+          <li> """ triple qoutes used at the beginning of the class will be called by the <code>_doc_</code></li>
+        </ol>
+        <p><b>Inheritence</b></p>
+        <ol>
+          <li>Inheritance allows code to reused through Child Classes "inheriting" traits from Parent Classes.<br>
+          <pre>
+            <code>
+              Class Parent():
+                def_init_(self,last_name,eye_color):
+                self.last_name =last_name
+                self.eye_color = eye_color
+              class Child(Parent:) // This creates the inheritance
+                def_init_(self,last_name,eye_color,number_of_toys):
+                  parent._init_(self, last_name, eye_color) // This inits the inheritance
+                  self.number_of_toys = number_of_toys
+            </code>
+          </pre></li>
+          <li> Writing code utilizing inheritance allows us to write intuitivley the way our brain works.</li>
+        </ol>
+        <p><b> Reusing Methods</b></p>
+          <ol>
+            <li> If a child inherits variables from the parent, it also inherits methods.</li>
+            <li> This means a method can be called for the child even though it is defined in the parent class.</li>
+            <li> This allows a programmer to reuse code.</li>
+            <li> If the same method is defined in the child it will "<b>method overide</b>" the parent class. In other words, the child method will be used instead of the parent method.</li>
+            <li> OOP is a way to structure code so that it is intuitive and clean, meaning that code is reused and logical. This allows
+                 programs to use less resources, be easier to troubleshoot and modify, and make them easier to design.</li>
+          </ol>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
