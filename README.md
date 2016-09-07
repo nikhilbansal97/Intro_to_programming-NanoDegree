@@ -9,7 +9,7 @@ Ideal for beginners who want to learn new skills, make informed choices about ca
 * HTML
 * CSS
 * JavaScript
-* Phyton Fundamentals
+* Python Fundamentals
 * Object Oriented Progamming Concepts
 * BootsTrap
 * Functions
